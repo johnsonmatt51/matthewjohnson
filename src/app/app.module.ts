@@ -3,9 +3,11 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { TopNavComponent } from "./home/top-nav/top-nav.component";
 import {SideNavComponent} from "./home/side-nav/side-nav.component";
+import {HomeStore} from "./home/home.store";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import {SideNavComponent} from "./home/side-nav/side-nav.component";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule,
   ],
-  providers: [],
+  providers: [
+    HomeStore,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

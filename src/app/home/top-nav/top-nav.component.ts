@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import {environment} from "../../../environments/environment";
+import {HomeStore} from "../home.store";
 
 @Component({
   selector: "app-top-nav",
@@ -10,10 +11,14 @@ export class TopNavComponent implements OnInit {
 
   baseTitle: string;
 
-  constructor() { }
+  constructor(private homeStore: HomeStore) { }
 
   ngOnInit() {
     this.baseTitle = environment.baseTitle;
+  }
+
+  onToggleSidebar() {
+    this.homeStore.toggleSidebar();
   }
 
 }

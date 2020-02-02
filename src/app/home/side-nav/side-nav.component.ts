@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import {HomeStore} from "../home.store";
 
 @Component({
   selector: "app-side-nav",
@@ -7,9 +8,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SideNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private homeStore: HomeStore) {}
 
   ngOnInit() {
+  }
+
+  get isOpen() {
+    return this.homeStore.sidebarIsOpen;
   }
 
 }
