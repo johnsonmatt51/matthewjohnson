@@ -1,0 +1,27 @@
+.sidebar {
+  color: #fff;
+  position: fixed;
+  top: 50px;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #464646;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand img {
+  width: 25%;
+}
+
+.loginName {
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #101010;
+}
